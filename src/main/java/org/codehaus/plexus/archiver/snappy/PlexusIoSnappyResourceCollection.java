@@ -1,7 +1,7 @@
 package org.codehaus.plexus.archiver.snappy;
 
 import javax.annotation.Nonnull;
-import javax.annotation.WillNotClose;
+//import javax.annotation.WillNotClose;
 import javax.inject.Named;
 
 import java.io.File;
@@ -23,7 +23,7 @@ public class PlexusIoSnappyResourceCollection extends PlexusIoCompressedFileReso
 
     @Nonnull
     @Override
-    protected @WillNotClose InputStream getInputStream(File file) throws IOException {
+    protected /*@WillNotClose*/ InputStream getInputStream(File file) throws IOException {
         return SnappyUnArchiver.getSnappyInputStream(Streams.fileInputStream(file));
     }
 

@@ -1,6 +1,6 @@
 package org.codehaus.plexus.archiver;
 
-import javax.annotation.CheckForNull;
+//import javax.annotation.CheckForNull;
 
 import java.io.File;
 
@@ -15,6 +15,6 @@ public interface ArchivedFileSet extends BaseFileSet {
     /**
      * Returns the archive file.
      */
-    @CheckForNull
+//    @CheckForNull
     File getArchive();
 }

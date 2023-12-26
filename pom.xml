@@ -8,11 +8,12 @@
     <version>16</version>
   </parent>
 
+	<groupId>org.infrastructurebuilder.usurped</groupId>
   <artifactId>plexus-archiver</artifactId>
-  <version>4.9.2-SNAPSHOT</version>
+  <version>4.9.1.1-SNAPSHOT</version>
   <name>Plexus Archiver Component</name>
 
-  <url>https://codehaus-plexus.github.io/plexus-archiver/</url>
+  <url>https://infrastructurebuilder.github.io/plexus-archiver/</url>
 
   <contributors>
     <contributor>
@@ -28,14 +29,14 @@
   </contributors>
 
   <scm>
-    <connection>scm:git:https://github.com/codehaus-plexus/plexus-archiver.git</connection>
-    <developerConnection>scm:git:https://github.com/codehaus-plexus/plexus-archiver.git</developerConnection>
+    <connection>scm:git:https://github.com/infrastructurebuilder/plexus-archiver.git</connection>
+    <developerConnection>scm:git:https://github.com/infrastructurebuilder/plexus-archiver.git</developerConnection>
     <tag>HEAD</tag>
-    <url>https://github.com/codehaus-plexus/plexus-archiver/tree/${project.scm.tag}/</url>
+    <url>https://github.com/infrastructurebuilder/plexus-archiver/tree/${project.scm.tag}/</url>
   </scm>
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/codehaus-plexus/plexus-archiver/issues</url>
+    <url>https://github.com/infrastructurebuilder/plexus-archiver/issues</url>
   </issueManagement>
   <distributionManagement>
     <site>
@@ -50,12 +51,19 @@
   </properties>
 
   <dependencies>
+		<dependency>
+			<groupId>io.avaje</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1.0</version>
+		</dependency>
     <!-- JSR330 -->
+<!--
     <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
       <version>1</version>
     </dependency>
+-->
     <!-- Plexus dependencies -->
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
@@ -65,7 +73,7 @@
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
       <artifactId>plexus-io</artifactId>
-      <version>3.4.1</version>
+      <version>3.4.2</version>
     </dependency>
     <!-- Apache Commons dependencies -->
     <dependency>
@@ -102,11 +110,18 @@
       <scope>runtime</scope>
     </dependency>
     <dependency>
+      <groupId>io.avaje</groupId>
+      <artifactId>avaje-jsr305</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!--
+    <dependency>
       <groupId>com.google.code.findbugs</groupId>
       <artifactId>jsr305</artifactId>
       <version>3.0.2</version>
       <scope>provided</scope>
     </dependency>
+    -->
     <!-- Test dependencies -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>

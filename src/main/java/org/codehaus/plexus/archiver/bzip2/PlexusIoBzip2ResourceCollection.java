@@ -1,7 +1,7 @@
 package org.codehaus.plexus.archiver.bzip2;
 
 import javax.annotation.Nonnull;
-import javax.annotation.WillNotClose;
+//import javax.annotation.WillNotClose;
 import javax.inject.Named;
 
 import java.io.File;
@@ -25,7 +25,7 @@ public class PlexusIoBzip2ResourceCollection extends PlexusIoCompressedFileResou
 
     @Nonnull
     @Override
-    protected @WillNotClose InputStream getInputStream(File file) throws IOException {
+    protected /*@WillNotClose*/ InputStream getInputStream(File file) throws IOException {
         return BZip2UnArchiver.getBZip2InputStream(fileInputStream(file));
     }
 
