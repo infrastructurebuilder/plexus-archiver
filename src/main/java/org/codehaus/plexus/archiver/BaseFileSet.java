@@ -1,6 +1,6 @@
 package org.codehaus.plexus.archiver;
 
-//import javax.annotation.CheckForNull;
+// import javax.annotation.CheckForNull;
 
 import org.codehaus.plexus.components.io.filemappers.FileMapper;
 import org.codehaus.plexus.components.io.fileselectors.FileSelector;
@@ -18,21 +18,21 @@ public interface BaseFileSet {
      * Returns the prefix, which the file sets contents shall
      * have.
      */
-//    @CheckForNull
+    //    @CheckForNull
     String getPrefix();
 
     /**
      * Returns a string of patterns, which included files
      * should match.
      */
-//    @CheckForNull
+    //    @CheckForNull
     String[] getIncludes();
 
     /**
      * Returns a string of patterns, which excluded files
      * should match.
      */
-//    @CheckForNull
+    //    @CheckForNull
     String[] getExcludes();
 
     /**
@@ -56,7 +56,7 @@ public interface BaseFileSet {
      * Returns a set of file selectors, which should be used
      * to select the included files.
      */
-//    @CheckForNull
+    //    @CheckForNull
     FileSelector[] getFileSelectors();
 
     /**
@@ -70,6 +70,6 @@ public interface BaseFileSet {
      * Returns a set of file mappers, which should be used
      * to change the filename of the included files.
      */
-//    @CheckForNull
+    //    @CheckForNull
     FileMapper[] getFileMappers();
 }

@@ -15,8 +15,8 @@
  */
 package org.codehaus.plexus.archiver.util;
 
-//import javax.annotation.WillClose;
-//import javax.annotation.WillNotClose;
+// import javax.annotation.WillClose;
+// import javax.annotation.WillNotClose;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -72,8 +72,8 @@ public class Streams {
         }
     }
 
-    public static void copyFully(/*@WillClose*/ InputStream zIn, /*@WillClose*/ OutputStream out, String gzip)
-            throws ArchiverException {
+    public static void copyFully(
+            /*@WillClose*/ InputStream zIn, /*@WillClose*/ OutputStream out, String gzip) throws ArchiverException {
         // There must be 1 million libs out there that do this
         try {
             copyFullyDontCloseOutput(zIn, out, gzip);
@@ -86,8 +86,8 @@ public class Streams {
         }
     }
 
-    public static void copyFullyDontCloseOutput(/*@WillClose*/ InputStream zIn, /*@WillNotClose*/ OutputStream out, String gzip)
-            throws ArchiverException {
+    public static void copyFullyDontCloseOutput(
+            /*@WillClose*/ InputStream zIn, /*@WillNotClose*/ OutputStream out, String gzip) throws ArchiverException {
         // There must be 1 million libs out there that do this
         try {
             byte[] buffer = cacheBuffer();

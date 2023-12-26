@@ -1,7 +1,6 @@
 package org.codehaus.plexus.archiver.bzip2;
 
 import javax.annotation.Nonnull;
-//import javax.annotation.WillNotClose;
 import javax.inject.Named;
 
 import java.io.File;
