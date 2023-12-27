@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.codehaus.plexus.components.io.resources;
+package org.codehaus.plexus.components.io.resources.zip;
 
 /**
  * Wrapper to retain compatibility with old-style plexus-io. Can be removed "some day".
