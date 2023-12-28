@@ -51,19 +51,19 @@
   </properties>
 
   <dependencies>
+    <!-- JSR330 -->
+    <!--
     <dependency>
       <groupId>io.avaje</groupId>
       <artifactId>javax.inject</artifactId>
       <version>1.0</version>
     </dependency>
-    <!-- JSR330 -->
-    <!--
+-->
     <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
       <version>1</version>
     </dependency>
--->
     <!-- Plexus dependencies -->
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
@@ -113,6 +113,7 @@
       <groupId>io.avaje</groupId>
       <artifactId>avaje-jsr305</artifactId>
       <version>1.2</version>
+      <scope>provided</scope>
     </dependency>
     <!--
     <dependency>
@@ -162,6 +163,13 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <release>11</release>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
